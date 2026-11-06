@@ -1,0 +1,168 @@
+
+* {box-sizing: border-box;}
+
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background-image: url("/assets/onepiecebg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /*background: #F5F7F4;*/
+    color: #1D2A24;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Over the rainbow", cursive;
+
+}
+
+
+#container{
+    width: 100%;
+    max-width: 700px;
+    margin: 32px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+
+h3 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #1D2A24
+}
+
+
+#list {
+    width: 100%;
+    min-height: 180px;
+    max-height: 280px;
+    padding: 10px;
+   /* background: #f5f7f4;*/
+    background: rgba(183, 201, 181, 0.5);
+    border: 1px solid #e2e6e2;
+    border-radius: 12px;
+    overflow-y: auto;
+   overflow-wrap: anywhere;
+}
+
+.listItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.listItem:active {
+    animation: bubble-burst 200ms ease-out forwards;
+}
+
+.listItem.pop {
+    pointer-events: none;
+    animation: bubble-burst 50ms ease-out forwards;
+}
+
+@keyframes bubble-burst {
+    0% {
+        transform: scale(0.85);
+        opacity: 1;
+    }
+    40% {
+        transform: scale(.95);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.deleteBtn {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: #b7c9b5;
+    border: none;
+    border-radius: 8px;
+    color: #1D2A24;
+    font-size: 22px;
+    cursor: pointer;
+    
+}
+
+.deleteBtn:hover {
+    background: #f5dddd;
+    color: #c65b5b
+}
+
+#tools {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+#todo {
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #e2e6e2;
+    border-radius: 8px;
+    font: inherit;
+    outline: none;
+}
+
+#todo:focus {
+    border-color: #5F7D6A;
+}
+
+#submit {
+    padding: 0px 20px;
+    height: 44px;
+    color: #FFFFFF;
+    background-color: #5F7D6A; 
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+   
+    border-radius: 10px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    border: none; 
+
+    background-image: linear-gradient(180deg,
+        rgba(255, 255, 255, 0.40) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        rgba(0, 0, 0, 0.12) 100%);
+    box-shadow:
+        inset 0 2px 3px rgba(255, 255, 255, 0.7),   /* bright line along the top edge */
+        inset 0 0 14px rgba(255, 255, 255, 0.3),    /* soft glow around the rim */
+        inset 0 -6px 10px rgba(0, 0, 0, 0.15),      /* shade along the bottom */
+        0 8px 18px rgba(0, 0, 0, 0.25);             /* shadow under the button */
+    backdrop-filter: blur(8px);
+
+}
+
+#submit:hover{
+    transform: translateY(-2px)
+}
+
+
